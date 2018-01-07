@@ -78,9 +78,9 @@ Houdini 15.5 supports Pyside by default.
 
 ## FINAL RESULT:
 
-Reel : https://vimeo.com/249388964
+Reel : (https://vimeo.com/249388964)
 Password: reel2018
-Time: 0-1min
+Reel Time: 0-1min
 
 
 ## LIVE SYSTEM
