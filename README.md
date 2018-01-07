@@ -1,31 +1,31 @@
 # TREEMAKER
 
-##Description:
+## Description:
 
-##Department: Layout/matte paint
+## Department: Layout/matte paint
 
 For shots that required trees with leaves of different colors to be laid out in a large area. This work was done based on an artwork that suggested there were some areas with similar color trees but some areas with variations in the tree leaves.
 
 The plan was to let the matte painting department to create color maps that would have spots of colors on a black background that would decide the color of tree leaves in that area.
 
 
-##Getting Started
+## Getting Started
 This Code is based on a Tree OTL from Houdini orbolt.
 This code brings in an Otl called deciduous tree.So you would need the Otl to get started.
 This shelf tool has 2 parts:
 		1. otl importing
 		2. GUI
 
-##OTL importing
+## OTL importing
 On clicking the shelf tool after selecting the ground plane with enough subdivision the Otl gets imported into the code using
 hou.hda.installFile('../SideFX__deciduoustree.otl')
 
-##Building the GUI
+## Building the GUI
 This part is to graphically change the ground or repaint or select new image for the ground and to vary the growth, orientation, trunk width etc.
 Inaddition to that I have tried to bring randomness in height and orientation of trees
 
     
-##Prerequisites
+## Prerequisites
 This tool is built for Houdini
 It is tested on Linux and OSX
 This code is written using Python 2.7 and PySide
@@ -33,7 +33,7 @@ Houdini 15.5 supports Pyside by default.
 
 
 
-##Features of the tool
+## Features of the tool
 
 1.The Tool allows matte paints color map to be projected 
   on layout’s ground, creating trees with leaves of color based on the painted color
@@ -45,7 +45,7 @@ Houdini 15.5 supports Pyside by default.
 5.The Tool has additional controls to set the orientation, trunk width, growth
 6.The Tool automatically ensures that no tree is created on top of each other
 
-##STEPS:
+## STEPS:
 
 1. Select the node in the geometry geometry level which will be the ground plane
 2. Click on the ‘import tree otl’ shelf tool. It create 2 nodes: 
@@ -76,28 +76,28 @@ Houdini 15.5 supports Pyside by default.
 
 
 
-##FINAL RESULT:
+## FINAL RESULT:
 
 Reel : https://vimeo.com/249388964
 Password: reel2018
 Time: 0-1min
 
 
-##LIVE SYSTEM
+## LIVE SYSTEM
 This tool can be easily used in production, as it is built using Houdini and Python
 It has been tested and used on Linux and OSX
 The tree Otl the tool uses, can be change to any in house asset otl. 
 
-##Built With
+## Built With
 sublime text 2
 github for versioning
 
-##Authors
+## Authors
 This code is entirely written by Meera George.
 It was developed in production for my previous company,
 This is a simplified version of the same code.
 
-##Acknowledgments
+## Acknowledgments
 I would like to thank
 GITHUB, CODEFIGHTS.COM, UDEMY, ODFORCE SCRIPTING FORUM,CG SOCIETY,
 SIDEFX FORUM which helped me complete this tool.
