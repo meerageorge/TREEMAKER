@@ -92,11 +92,11 @@ Houdini 15.5 supports Pyside by default.
 
 ## FINAL RESULT:
 
-Reel : (https://vimeo.com/249388964)
+		Reel : (https://vimeo.com/249388964)
 
-Password: reel2018
+		Password: reel2018
 
-Reel Time: 0-1 min
+		Reel Time: 0-1 min
 
 
 ## LIVE SYSTEM
@@ -105,9 +105,9 @@ It has been tested and used on Linux and OSX
 The tree Otl the tool uses, can be change to any in house asset otl. 
 
 ## Built With
-sublime text 2;
+		sublime text 2
 
-github for versioning
+		github for versioning
 
 ## Authors
 This code is entirely written by Meera George.
