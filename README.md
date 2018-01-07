@@ -13,7 +13,9 @@ The plan was to let the matte painting department to create color maps that woul
 This Code is based on a Tree OTL from Houdini orbolt.
 This code brings in an Otl called deciduous tree.So you would need the Otl to get started.
 This shelf tool has 2 parts:
+
 		1. Otl importing - IMPORT_TREE_OTL.py
+
 		2. Building GUI - TREE_MAKER.py
 
 ## OTL importing
@@ -37,12 +39,17 @@ Houdini 15.5 supports Pyside by default.
 
 1.The Tool allows matte paints color map to be projected 
   on layout’s ground, creating trees with leaves of color based on the painted color
+
 2.The Tool allows other departments to add paint in houdini to 
   add/remove a particular color tree using Houdini’s inbuilt paint tool.
+
 3.The Tool works with all form of terrains.The tree would be created based on normals 
   of surface
+
 4.The Tool allows the user to change the ground.
+
 5.The Tool has additional controls to set the orientation, trunk width, growth
+
 6.The Tool automatically ensures that no tree is created on top of each other
 
 ## STEPS:
