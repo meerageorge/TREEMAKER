@@ -37,54 +37,53 @@ Houdini 15.5 supports Pyside by default.
 
 ## Features of the tool
 
-1.The Tool allows matte paints color map to be projected 
-  on layout’s ground, creating trees with leaves of color based on the painted color
+		1.The Tool allows matte paints color map to be projected 
+  		on layout’s ground, creating trees with leaves of color based on the painted color
 
-2.The Tool allows other departments to add paint in houdini to 
-  add/remove a particular color tree using Houdini’s inbuilt paint tool.
+		2.The Tool allows other departments to add paint in houdini to 
+  		add/remove a particular color tree using Houdini’s inbuilt paint tool.
 
-3.The Tool works with all form of terrains.The tree would be created based on normals 
-  of surface
+		3.The Tool works with all form of terrains.The tree would be created based on normals of surface
 
-4.The Tool allows the user to change the ground.
+		4.The Tool allows the user to change the ground.
 
-5.The Tool has additional controls to set the orientation, trunk width, growth
+		5.The Tool has additional controls to set the orientation, trunk width, growth
 
-6.The Tool automatically ensures that no tree is created on top of each other
+		6.The Tool automatically ensures that no tree is created on top of each other
 
 ## STEPS:
 
-1. Select the node in the geometry geometry level which will be the ground plane
+		1. Select the node in the geometry geometry level which will be the ground plane
 
-2. Click on the ‘import tree otl’ shelf tool. It create 2 nodes: 
+		2. Click on the ‘import tree otl’ shelf tool. It create 2 nodes: 
 				1. Deciduoustree1 - import tree 
 				2. Geo1 - contains all nodes to make tree grow based on the color 
 				
-3. Geo node creation:
+## Geo node creation:
 
-4. Checks for selection of ground if not will display message.
-		sel_node = hou.selectedNodes()
-		if len(sel_node) < 1:
-   			 hou.ui.displayMessage('select a ground')
-			 
-5. Create nodes 
-		obj_ctxt = hou.node('obj')
-   		obj = hou.node('obj')
-    		geo = obj.createNode('geo', run_init_scripts=False)
-		node=geo.createNode(“nodename”)
-		
-6. Set input to all created nodes
-		node.setInput(0,node)
-		
-7. Set parameter of nodes
-		parameter=node.parm(“parm_name”)
-		parameter.set(value)
-	Or if it is an expression:
-		parameter.setExpression(“expression”)
-		
-8. Create vop node to grow tree on the image based ground
+		1. Checks for selection of ground if not will display message.
+				sel_node = hou.selectedNodes()
+				if len(sel_node) < 1:
+		   			 hou.ui.displayMessage('select a ground')
+					 
+		2. Create nodes 
+				obj_ctxt = hou.node('obj')
+		   		obj = hou.node('obj')
+		    		geo = obj.createNode('geo', run_init_scripts=False)
+				node=geo.createNode(“nodename”)
+				
+		3. Set input to all created nodes
+				node.setInput(0,node)
+				
+		4. Set parameter of nodes
+				parameter=node.parm(“parm_name”)
+				parameter.set(value)
+				Or if it is an expression:
+				parameter.setExpression(“expression”)
+				
+		5. Create vop node to grow tree on the image based ground
 
-9. Two wrangle nodes created named :
+		6. Two wrangle nodes created named :
 				1.Attribwrangle_pscale -for height randomness
 				2.Attribwrangle_rotation -for orientation randomness
 
