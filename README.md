@@ -18,7 +18,7 @@ This shelf tool has 2 parts:
 
 ## OTL importing
 On clicking the shelf tool after selecting the ground plane with enough subdivision the Otl gets imported into the code using
-hou.hda.installFile('../SideFX__deciduoustree.otl')
+hou.hda.installFile('../tree.otl')
 
 ## Building the GUI
 This part is to graphically change the ground or repaint or select new image for the ground and to vary the growth, orientation, trunk width etc.
