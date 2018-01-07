@@ -13,8 +13,8 @@ The plan was to let the matte painting department to create color maps that woul
 This Code is based on a Tree OTL from Houdini orbolt.
 This code brings in an Otl called deciduous tree.So you would need the Otl to get started.
 This shelf tool has 2 parts:
-		1. otl importing
-		2. GUI
+		1. Otl importing - IMPORT_TREE_OTL.py
+		2. Building GUI - TREE_MAKER.py
 
 ## OTL importing
 On clicking the shelf tool after selecting the ground plane with enough subdivision the Otl gets imported into the code using
@@ -48,27 +48,35 @@ Houdini 15.5 supports Pyside by default.
 ## STEPS:
 
 1. Select the node in the geometry geometry level which will be the ground plane
+
 2. Click on the ‘import tree otl’ shelf tool. It create 2 nodes: 
 				1. Deciduoustree1 - import tree 
 				2. Geo1 - contains all nodes to make tree grow based on the color 
+				
 3. Geo node creation:
+
 4. Checks for selection of ground if not will display message.
 		sel_node = hou.selectedNodes()
 		if len(sel_node) < 1:
    			 hou.ui.displayMessage('select a ground')
+			 
 5. Create nodes 
 		obj_ctxt = hou.node('obj')
    		obj = hou.node('obj')
     		geo = obj.createNode('geo', run_init_scripts=False)
 		node=geo.createNode(“nodename”)
+		
 6. Set input to all created nodes
 		node.setInput(0,node)
+		
 7. Set parameter of nodes
 		parameter=node.parm(“parm_name”)
 		parameter.set(value)
 	Or if it is an expression:
 		parameter.setExpression(“expression”)
-8. Create vop node to grow tree on the image based ground 
+		
+8. Create vop node to grow tree on the image based ground
+
 9. Two wrangle nodes created named :
 				1.Attribwrangle_pscale -for height randomness
 				2.Attribwrangle_rotation -for orientation randomness
@@ -91,7 +99,8 @@ It has been tested and used on Linux and OSX
 The tree Otl the tool uses, can be change to any in house asset otl. 
 
 ## Built With
-sublime text 2
+sublime text 2;
+
 github for versioning
 
 ## Authors
