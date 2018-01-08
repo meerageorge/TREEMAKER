@@ -118,7 +118,7 @@ Houdini 15.5 supports Pyside by default.
 	        7. Reset button will clear image or painting done on the ground
 
 	        8. Tree growth, fruit on/off, orientaion and trunk width is controlled by a
-	            	slider and its value is displayed in a spin box
+	        slider and its value is displayed in a spin box
 	            	self.tree_orint_slider = QtGui.QSlider(self)
 		            self.tree_orint_val = QtGui.QSpinBox(self)
 		            slider_value = int(self.sender().value())
