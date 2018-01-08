@@ -94,25 +94,25 @@ Houdini 15.5 supports Pyside by default.
 		2. Window title is 'Tree Maker' with a tree icon
 
 		3. Created label for ground path line edit, tree height, fruit on/off,  
-			orientation, trunk width, random height and random orientation. Size and position of label is set using setGeometry. Text color style is done by setStyleSheet
+		orientation, trunk width, random height and random orientation. Size and position of label is set using setGeometry. Text color style is done by setStyleSheet
 				label=QLabel("text")
 				self.grnd_path_label = QtGui.QLabel('GROUND PATH', self)
-        		self.grnd_path_label.setGeometry(5, 120, 200, 30)
-        		self.grnd_path_label.setStyleSheet('QLabel{color:rgb(200,80,80)}')
+				self.grnd_path_label.setGeometry(5, 120, 200, 30)
+				self.grnd_path_label.setStyleSheet('QLabel{color:rgb(200,80,80)}')
 
         4. Button to select ground
         		self.grnd_path_btn = QtGui.QPushButton('SELECT GROUND', self)
-         	opens a houdini tree view
+        opens a houdini tree view
          		grnd = hou.ui.curDesktop().createFloatingPanel(hou.paneTabType.TreeView)
-         	selecting new ground and on pressing 'confirm' selects new ground.
-         	'Ground path' line edit text takes new path.
+        selecting new ground and on pressing 'confirm' selects new ground.
+        'Ground path' line edit text takes new path.
 
         5. Paint button select paint tool and allows you to paint on the ground
          		paint_node = hou.node('/obj/geo1//paint1')
         		paint_node.setSelected(True, True, True) 
 
         6. Select image button open 'file open window' and allows to select new image 
-        	image for the ground
+        image for the ground
         		fl = QtGui.QFileDialog.getOpenFileName()
 
         7. Reset button will clear image or painting done on the ground
@@ -126,7 +126,7 @@ Houdini 15.5 supports Pyside by default.
 	        		                     '/obj/deciduoustree1/treesys1_lsystem1_randseed')
 	        	tree_orint_parm.set(slider_value)
 	        	self.tree_orientation_val.setValue(slider_value)
-	    
+
 	    9. For do on/off randomness on tree height and orientaion checkbox is provided
 	    		self.pscale = QtGui.QCheckBox(self)
 	    		if state == QtCore.Qt.Checked:
