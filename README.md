@@ -94,7 +94,10 @@ Houdini 15.5 supports Pyside by default.
 		2. Window title is 'Tree Maker' with a tree icon
 
 		3. Created label for ground path line edit, tree height, fruit on/off,  
-		orientation, trunk width, random height and random orientation. Size and position of label is set using setGeometry. Text color style is done by setStyleSheet
+		orientation, trunk width, random height and random orientation. 
+
+		Size and position of label is set using setGeometry. 
+		Text color style is done by setStyleSheet
 				label=QLabel("text")
 				self.grnd_path_label = QtGui.QLabel('GROUND PATH', self)
 				self.grnd_path_label.setGeometry(5, 120, 200, 30)
