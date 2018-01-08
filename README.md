@@ -100,41 +100,41 @@ Houdini 15.5 supports Pyside by default.
 				self.grnd_path_label.setGeometry(5, 120, 200, 30)
 				self.grnd_path_label.setStyleSheet('QLabel{color:rgb(200,80,80)}')
 
-        4. Button to select ground
-        		self.grnd_path_btn = QtGui.QPushButton('SELECT GROUND', self)
-        opens a houdini tree view
-         		grnd = hou.ui.curDesktop().createFloatingPanel(hou.paneTabType.TreeView)
-        selecting new ground and on pressing 'confirm' selects new ground.
-        'Ground path' line edit text takes new path.
+	        4. Button to select ground
+	        		self.grnd_path_btn = QtGui.QPushButton('SELECT GROUND', self)
+	        opens a houdini tree view
+	         		grnd = hou.ui.curDesktop().createFloatingPanel(hou.paneTabType.TreeView)
+	        selecting new ground and on pressing 'confirm' selects new ground.
+	        'Ground path' line edit text takes new path.
 
-        5. Paint button select paint tool and allows you to paint on the ground
-         		paint_node = hou.node('/obj/geo1//paint1')
-        		paint_node.setSelected(True, True, True) 
+	        5. Paint button select paint tool and allows you to paint on the ground
+	         		paint_node = hou.node('/obj/geo1//paint1')
+	        		paint_node.setSelected(True, True, True) 
 
-        6. Select image button open 'file open window' and allows to select new image 
-        image for the ground
-        		fl = QtGui.QFileDialog.getOpenFileName()
+	        6. Select image button open 'file open window' and allows to select new image 
+	        image for the ground
+	        		fl = QtGui.QFileDialog.getOpenFileName()
 
-        7. Reset button will clear image or painting done on the ground
+	        7. Reset button will clear image or painting done on the ground
 
-        8. Tree growth, fruit on/off, orientaion and trunk width is controlled by a
-            	slider and its value is displayed in a spin box
-            	self.tree_orint_slider = QtGui.QSlider(self)
-	            self.tree_orint_val = QtGui.QSpinBox(self)
-	            slider_value = int(self.sender().value())
-	        	tree_orint_parm = hou.parm(
-	        		                     '/obj/deciduoustree1/treesys1_lsystem1_randseed')
-	        	tree_orint_parm.set(slider_value)
-	        	self.tree_orientation_val.setValue(slider_value)
+	        8. Tree growth, fruit on/off, orientaion and trunk width is controlled by a
+	            	slider and its value is displayed in a spin box
+	            	self.tree_orint_slider = QtGui.QSlider(self)
+		            self.tree_orint_val = QtGui.QSpinBox(self)
+		            slider_value = int(self.sender().value())
+		        	tree_orint_parm = hou.parm(
+		        		                     '/obj/deciduoustree1/treesys1_lsystem1_randseed')
+		        	tree_orint_parm.set(slider_value)
+		        	self.tree_orientation_val.setValue(slider_value)
 
-	    9. For do on/off randomness on tree height and orientaion checkbox is provided
-	    		self.pscale = QtGui.QCheckBox(self)
-	    		if state == QtCore.Qt.Checked:
-		            x = hou.parm('/obj/geo1/attribwrangle_pscale/snippet')
-		            x.set('@pscale=rand(@ptnum)+.3;')
-	        	else:
-		            x = hou.parm('/obj/geo1/attribwrangle_pscale/snippet')
-		            x.set('')
+		    9. For do on/off randomness on tree height and orientaion checkbox is provided
+		    		self.pscale = QtGui.QCheckBox(self)
+		    		if state == QtCore.Qt.Checked:
+			            x = hou.parm('/obj/geo1/attribwrangle_pscale/snippet')
+			            x.set('@pscale=rand(@ptnum)+.3;')
+		        	else:
+			            x = hou.parm('/obj/geo1/attribwrangle_pscale/snippet')
+			            x.set('')
                                            
 
 
