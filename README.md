@@ -1,8 +1,12 @@
 # TREEMAKER
 
+		Reel : ( https://vimeo.com/249388964 )
+
+		Password: reel2018
+		
 ## Description:
 
-## Department: Layout/matte paint
+### Department: Layout/matte paint
 
 For shots that required trees with leaves of different colors to be laid out in a large area. This work was done based on an artwork that suggested there were some areas with similar color trees but some areas with variations in the tree leaves.
 
@@ -23,7 +27,8 @@ On clicking the shelf tool after selecting the ground plane with enough subdivis
 hou.hda.installFile('../tree.otl')
 
 ## Building the GUI
-This part is to graphically change the ground or repaint or select new image for the ground and to vary the growth, orientation, trunk width etc.
+User can change the ground / repaint. User can also select new image for the ground 
+and to vary the growth, orientation, trunk width etc.
 Inaddition to that I have tried to bring randomness in height and orientation of trees
 
     
