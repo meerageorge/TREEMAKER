@@ -119,13 +119,13 @@ Houdini 15.5 supports Pyside by default.
 
 	        8. Tree growth, fruit on/off, orientaion and trunk width is controlled by a
 	        slider and its value is displayed in a spin box
-	            		self.tree_orint_slider = QtGui.QSlider(self)
+	            	self.tree_orint_slider = QtGui.QSlider(self)
 		            self.tree_orint_val = QtGui.QSpinBox(self)
 		            slider_value = int(self.sender().value())
-	        	tree_orint_parm = hou.parm(
-	        		                     '/obj/deciduoustree1/treesys1_lsystem1_randseed')
-	        	tree_orint_parm.set(slider_value)
-	        	self.tree_orientation_val.setValue(slider_value)
+		        	tree_orint_parm = hou.parm(
+		        		                     '/obj/deciduoustree1/treesys1_lsystem1_randseed')
+		        	tree_orint_parm.set(slider_value)
+		        	self.tree_orientation_val.setValue(slider_value)
 
 		    9. For do on/off randomness on tree height and orientaion checkbox is provided
 		    		self.pscale = QtGui.QCheckBox(self)
