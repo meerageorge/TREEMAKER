@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 # import modules
-#IMPORT TREE NODES
+#CREATING ALL THE TREE NODES
 import toolutils
 import soptoolutils
 import sys
